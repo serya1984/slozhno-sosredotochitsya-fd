@@ -8,41 +8,13 @@
 :root.theme-light {
   --accent-color: #FF8DCB;
   --paragraph-style: #353430;
+  --elements-color: #353430;
+  --title-decor-color: #353430;
   --bg-color: #fff1f7;
   --paragraph-text-color: #FF8DCB;
   --color-title: #FFC2E6;
-  --decorate-color: #FF007066;
+  --decorate-color: #353430;
   --bacground-image: url(../images/cover-image-light.png);
-}
-
-.theme-light .page {
-  background-image: url(--bacground-image);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-
-.theme-light .header__text {
-  color: var(--paragraph-style);
-}
-
-.theme-light .header__theme-menu-button {
-  color: var(--paragraph-style);
-}
-
-.theme-light .header__theme-menu-button_active {
-  outline: 1px solid var(--paragraph-style);
-}
-
-.theme-light .decorated-zone::before {
-  border-top: 1px solid var(--paragraph-style);
-  border-right: 1px solid var(--paragraph-style);
-}
-
-.theme-light .decorated-zone::after {
-  border-bottom: 1px solid var(--paragraph-style);
-  border-left: 1px solid var(--paragraph-style);
 }
 
 .theme-light .visually-hidden {
@@ -53,54 +25,6 @@
   position: absolute;
   white-space: nowrap;
   width: 1px;
-}
-
-.theme-light .title__decor {
-  background-color: var(--accent-color);
-  color: var(--paragraph-style);
-  font-family: var(--font-family), sans-serif;
-  font-size: var(--article-size);
-  line-height: var(--line-height);
-}
-
- .theme-light .problem__concentrating-title {
-  color: var(--paragraph-style);
-}
-
-
-.theme-light .effecn__on-concentration-article--title {
-  color: var(--paragraph-style);
-}
-
-.theme-light .advice__title {
-  color: var(--paragraph-style);
-}
-
-.theme-light .paragraph__title {
-  color: var(--paragraph-style);
-}
-
-@media (width >= 1024px) {
-
-  .theme-light .text__link:focus {
-    outline: none;
-  }
-
-  .theme-light .text__link:hover {
-     text-decoration: underline solid var(--paragraph-style);
-  }
-
-  .theme-light .header__theme-menu-button:hover {
-    border-bottom: 1px solid var(--paragraph-style);
-  }
-
-  .theme-light .header__theme-menu-button:focus{
-    outline: none;
-  }
-
-  .theme-light .header__theme-menu-button:focus-visible {
-    outline: 1px solid var(--paragraph-style); 
-  }
 }
 
 @media (prefers-color-scheme: light) {

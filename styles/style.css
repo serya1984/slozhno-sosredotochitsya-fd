@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  block-size: 100vh;
+  overflow: hidden auto;
   background-color: var(--bg-color);
   min-inline-size: 375px;
   background-image: var(--bacground-image);
@@ -11,16 +11,17 @@
   background-attachment: fixed;
 }
 
-.header {
-  block-size: 100%;
+.header { 
+  block-size: 100vh;
+  min-block-size: 668px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
- 
+
 }
 
 .corner__top-right {
-  font-family: var(--font-family);
+  font-family: var(--font-family), sans-serif;
   position: absolute;
   color: var(--accent-color);
   top: 0.7em;
@@ -48,8 +49,8 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--elements-color);
+  border-right: 1px solid var(--elements-color);
   top: 0.6em;
   right: 0.6em;
 }
@@ -59,8 +60,8 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--elements-color);
+  border-left: 1px solid var(--elements-color);
   bottom: 0.6em;
   left: 0.6em;
 }
@@ -81,7 +82,7 @@
   font-family: var(--font-family), sans-serif;
   font-weight: 400;
   font-size: var(--article-size);
-  color: var(--accent-color);
+  color: var(--elements-color);
   text-transform: lowercase;
   background-color: transparent;
   border: none;
@@ -89,7 +90,12 @@
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color);
+  pointer-events: none;
+  outline: 1px solid var(--elements-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
 }
 
 .header__title {
@@ -110,18 +116,11 @@
   padding-block-end: 1.6em;
 }
 
-.title__decor {
-  background-color: var(--accent-color);
-  color: var(--paragraph-text-color);
-  font-family: var(--font-family), sans-serif;
-  font-size: var(--article-size);
-  line-height: var(--line-height);
-}
-
 .header__text {
   font-weight: 700;
   font-size: var(--article-size);
   line-height: var(--line-height);
+  font-family: var(--font-family), sans-serif;
   display: flex;
   flex-direction: column;
   inline-size: var(--paragraph-block-size);
@@ -135,44 +134,36 @@
   line-height: var(--line-height);
 }
 
-.problem__concentrating {
+.content__section-style {
   font-family: var(--font-family), sans-serif;
 }
 
-.problem__concentrating-title {
-  color: var(--accent-color);
+.section__title {
+  color: var(--elements-color);
   font-size: var(--article-size);
   font-weight: bold;
+}
+
+.title__decor {
+  background-color: var(--accent-color);
+  color: var(--title-decor-color);
+  font-size: var(--article-size);
+  line-height: var(--line-height);
+}
+
+.paragraf__decor {
+  color: var(--paragraph-style);
+  font-size: var(--article-size);
+  font-weight: normal;
 }
 
 .problem__concentrating-article {
   margin-block-start: 3vh;
 }
 
-.problem__concentrating-article--title_multitasking {
-  color: var(--paragraph-text-color);
-  background-color: var(--accent-color);
+.problem__concentrating-article--title {
   margin-block-end: 1.5vh;
-  font-weight: bold;
-}
-
-.problem__concentrating-article--text_multitasking {
-  color: var(--paragraph-style);
-  font-size: var(--article-size);
-  font-weight: normal;
-}
-
-.problem__concentrating-article--title_dopamine {
-  color: var(--paragraph-text-color);
-  background-color: var(--accent-color);
-  margin-block: 3vh 1.5vh;
-  font-weight: bold;
-}
-
-.problem__concentrating-article--text_dopamine {
-  color: var(--paragraph-style);
-  font-size: var(--article-size);
-  font-weight: normal;
+  margin-block-start: 3vh;
 }
 
 .text__link {
@@ -184,14 +175,7 @@
   outline: none;
 }
 
-.effecn__on-concentration {
-  font-family: var(--font-family), sans-serif;
-}
-
 .effect__on-concentration--title {
-  font-size: var(--article-size);
-  color: var(--accent-color);
-  font-weight: 700;
   padding-block-start: 0.5vh;
 }
 
@@ -199,20 +183,7 @@
   margin-block: 3.4vh 1vh;
 }
 
-.effecn__on-concentration-article--paragraph {
-  font-size: var(--article-size);
-  color: var(--paragraph-style);
-  font-weight: normal;
-}
-
-.adviсe {
-  font-family: var(--font-family), sans-serif;
-}
-
 .advice__title {
-  color: var(--accent-color);
-  font-size: var(--article-size);
-  font-weight: bold;
   margin-block-start: 1vh;
 }
 
@@ -222,22 +193,12 @@
 
 .paragraph__title {
   margin-block: 1.16em 0.5em;
-  font-size: var(--article-size);
   font-weight: normal;
-  color: var(--bg-color);
   background-color: var(--accent-color);
-}
-
-.paragraph__text {
-  font-size: var(--article-size);
-  color: var(--paragraph-style);
 }
 
 .advice__article-title--images {
   margin-block: 2.8em 0.6em;
-  font-size: var(--article-size);
-  color: var(--bg-color);
-  background-color: var(--accent-color);
 }
 
 .section__images-list {
@@ -245,13 +206,6 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 1vh;
-}
-
-.section__images--title {
-  font-family: var(--font-family);
-  font-size: var(--article-size);
-  color: var(--bg-color);
-  background-color: var(--accent-color);
 }
 
 .section__images-list--item {
@@ -264,8 +218,10 @@
 }
 
 .footer {
-  block-size: 100%;
+  min-block-size: 668px;
   margin-block-start: 5.2vh;
+  display: flex;
+  align-items: center;
 }
 
 .footer-title {
@@ -275,7 +231,7 @@
   line-height: 83%;
   text-shadow: 4px 4px 0 var(--accent-color);
   text-align: center;
-  padding-block-start: 43vh;
+  margin-inline-start: 3vw;
 }
 
 @media (width >=768px) {
@@ -334,19 +290,19 @@
     margin-block-start: 0;
   }
 
-  .problem__concentrating-article--title_multitasking {
-    margin-block-end: 1vh;
+  .problem__concentrating-article--title {
+    margin-block: 0 1vh;
   }
 
-  .problem__concentrating-article--title_dopamine {
-    margin-block: 2vh 0.5vh;
+  .problem__concentrating-article--text {
+    margin-block-end: 2vh;
   }
 
 
   .effect__on-concentration--title {
     inline-size: 9.5em;
     padding-block-start: 0;
-    margin-block-start: 1vh;
+    margin-block-start: -1.5vh;
   }
 
   .effecn__on-concentration_article--list {
@@ -408,15 +364,20 @@
   }
 
   .footer {
-    margin-block-start: 5.5vh;
+      block-size: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      
   }
 
   .footer-title {
-    padding-block-start: 45.5vh;
+    margin-inline-start: 0;
   }
 }
 
-@media (width >= 1024px) {
+@media (width >=1024px) {
 
   .header {
     display: grid;
@@ -436,17 +397,17 @@
   }
 
   .header__theme-menu-button:hover {
-    border-bottom: 1px solid var(--decorate-color);
+    border-bottom: 1px solid var(--elements-color);
   }
 
-  .header__theme-menu-button:focus{
+  .header__theme-menu-button:focus {
     outline: none;
   }
 
   .header__theme-menu-button:focus-visible {
-    outline: 1px solid var(--decorate-color); 
+    outline: 1px solid var(--decorate-color);
   }
-  
+
   .header__article {
     padding-inline-end: 2vw;
     padding-block-start: 6.5vh;
@@ -455,7 +416,6 @@
   .main {
     padding-inline: 2vw;
   }
-
 
   .problem__concentrating {
     gap: 1vh;
@@ -466,10 +426,10 @@
   }
 
   .problem__concentrating-article {
-    margin-block-start: 2vh;
+    margin-block-start: -1.5vh;
   }
 
-  .problem__concentrating-article--title_dopamine {
+  .problem__concentrating-article--title {
     margin-block: 3vh 1.5vh;
   }
 
@@ -478,7 +438,7 @@
   }
 
   .text__link:hover {
-     text-decoration: underline solid var(--paragraph-style);
+    border-bottom: 1px solid var(--paragraph-style);
   }
 
   .text__link:focus-visible {
@@ -487,7 +447,7 @@
   }
 
   .effect__on-concentration--title {
-    margin-block-start: 3vh;
+    margin-block-start: 1vh;
     inline-size: 35vh;
   }
 
@@ -506,15 +466,15 @@
 
   .advice__title {
     margin-block-start: 3.5vh;
-}
+  }
 
-.adviсe__article {
-  margin-block-start: 3vh;
-}
+  .adviсe__article {
+    margin-block-start: 3vh;
+  }
 
 
   .section__images-container {
-    margin-block-start: 4vh;
+    margin-block-start: 3.5vh;
   }
 
   .section__images--title {
@@ -529,9 +489,5 @@
 
   .footer {
     margin-block-start: 8vh;
-}
-
-.footer-title {
-  padding-block-start: 41.5vh;
-}
+  }
 }
