@@ -1,7 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  overflow: hidden auto;
   background-color: var(--bg-color);
   min-inline-size: 375px;
   background-image: var(--bacground-image);
@@ -11,13 +10,12 @@
   background-attachment: fixed;
 }
 
-.header { 
+.header {
   block-size: 100vh;
   min-block-size: 668px;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
-
 }
 
 .corner__top-right {
@@ -37,7 +35,7 @@
   background-color: var(--accent-color);
   top: 0.4em;
   right: -1.3em;
-  box-shadow: 0 0 0 2px var(--accent-color);
+  box-shadow: 0 0 5px 5px var(--accent-color);
 }
 
 .decorated-zone {
@@ -162,8 +160,11 @@
 }
 
 .problem__concentrating-article--title {
-  margin-block-end: 1.5vh;
   margin-block-start: 3vh;
+}
+
+.problem__concentrating-article--text {
+  margin-block-start: 1.5vh;
 }
 
 .text__link {
@@ -175,12 +176,12 @@
   outline: none;
 }
 
-.effect__on-concentration--title {
-  padding-block-start: 0.5vh;
+.effecn__on-concentration-article--title {
+  margin-block-start: 3.4vh;
 }
 
-.effecn__on-concentration-article--title {
-  margin-block: 3.4vh 1vh;
+.effecn__on-concentration-article--paragraph {
+  margin-block-start: 1vh;
 }
 
 .advice__title {
@@ -192,9 +193,13 @@
 }
 
 .paragraph__title {
-  margin-block: 1.16em 0.5em;
+  margin-block-start: 3vh;
   font-weight: normal;
   background-color: var(--accent-color);
+}
+
+.paragraph__text {
+  margin-block-start: 1.5vh;
 }
 
 .advice__article-title--images {
@@ -202,7 +207,7 @@
 }
 
 .section__images-list {
-  margin-block-start: 1.6vh;
+  margin-block-start: 2vh;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1vh;
@@ -218,6 +223,7 @@
 }
 
 .footer {
+  block-size: 100vh;
   min-block-size: 668px;
   margin-block-start: 5.2vh;
   display: flex;
@@ -235,6 +241,11 @@
 }
 
 @media (width >=768px) {
+
+  .page {
+    min-block-size: 668px;
+    block-size: 100vh;
+  }
 
   .header {
     display: grid;
@@ -258,8 +269,8 @@
   }
 
   .corner__top-right {
-    top: 1.3em;
-    right: 3.3em;
+    top: 1.4em;
+    right: 3.2em;
   }
 
   .header__title {
@@ -274,43 +285,46 @@
     padding-block-start: 4vh;
   }
 
-
   .main {
+    margin-block-start: 5vh;
     padding-inline: 2vh;
+    gap: 5vh;
   }
 
   .problem__concentrating {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 3vw;
+  }
 
+  .problem__concentrating-title {
+    margin-block-start: 1vh;
   }
 
   .problem__concentrating-article {
-    margin-block-start: 0;
+    margin-block-start: 1vh;
   }
 
   .problem__concentrating-article--title {
-    margin-block: 0 1vh;
+    margin-block-start: initial;
   }
 
   .problem__concentrating-article--text {
-    margin-block-end: 2vh;
+    margin-block: 1vh 2vh;
   }
-
 
   .effect__on-concentration--title {
     inline-size: 9.5em;
     padding-block-start: 0;
-    margin-block-start: -1.5vh;
-  }
-
-  .effecn__on-concentration_article--list {
-    margin-block-start: 2vh;
+    margin-block: 0.5vh 2vh;
   }
 
   .effecn__on-concentration-article--title {
-    margin-block: 2vh 1vh;
+    margin-block-start: 0;
+  }
+
+  .effecn__on-concentration-article--paragraph {
+    margin-block: 1vh 1.9vh;
   }
 
   .adviсe {
@@ -319,12 +333,20 @@
     gap: 2.5vw;
   }
 
-  .advice__title {
-    margin-block-start: 0.5vh;
+  .adviсe__article {
+    margin-block-start: initial;
   }
 
-  .adviсe__article {
-    margin-block-start: 0.5vh;
+  .advice__article-title {
+    margin-block: 1vh 2vh;
+  }
+
+  .paragraph__title {
+    margin-block-start: initial;
+  }
+
+  .paragraph__text {
+    margin-block: 1vh 1.8vh;
   }
 
   .section__images-container {
@@ -360,16 +382,17 @@
   }
 
   .section__images--title {
-    margin-block-end: 3vw;
+    margin-block-end: 2.5vw;
   }
 
   .footer {
-      block-size: 100vh;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      
+    block-size: 100vh;
+    margin-block-start: 6vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
   }
 
   .footer-title {
@@ -415,6 +438,7 @@
 
   .main {
     padding-inline: 2vw;
+    gap: 6vh;
   }
 
   .problem__concentrating {
@@ -422,15 +446,15 @@
   }
 
   .problem__concentrating-title {
-    margin-block-start: 2vh;
+    margin-block-start: 3vh;
   }
 
   .problem__concentrating-article {
-    margin-block-start: -1.5vh;
+    margin-block-start: 3vh;
   }
 
-  .problem__concentrating-article--title {
-    margin-block: 3vh 1.5vh;
+  .problem__concentrating-article--text {
+    margin-block: 1.5vh 2vh;
   }
 
   .text__link:focus {
@@ -447,7 +471,7 @@
   }
 
   .effect__on-concentration--title {
-    margin-block-start: 1vh;
+    margin-block: 2.4vh 3vh;
     inline-size: 35vh;
   }
 
@@ -465,20 +489,23 @@
   }
 
   .advice__title {
-    margin-block-start: 3.5vh;
+    margin-block-start: 2.5vh;
   }
 
   .adviсe__article {
-    margin-block-start: 3vh;
+    margin-block-start: 2.5vh;
   }
 
+  .advice__article-title {
+    margin-block: 0 2.5vh
+  }
+
+  .paragraph__text {
+    margin-block: 1vh 3vh;
+  }
 
   .section__images-container {
-    margin-block-start: 3.5vh;
-  }
-
-  .section__images--title {
-    margin-block-end: 2vw;
+    margin-block-start: 1vh;
   }
 
   .section__images-list {
@@ -489,5 +516,19 @@
 
   .footer {
     margin-block-start: 8vh;
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
+
+  .theme-auto .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   }
 }

@@ -15,3 +15,18 @@
   --color-title: #DB00FF;
   --bacground-image: url(../images/cover-image-dark.png);
 }
+
+@media (prefers-color-scheme: dark) {
+
+  :root.theme-dark{
+  --accent-color: #ff0070;
+  --paragraph-style: #F1B2CE;
+  --decorate-color: #FF007066;
+  --bg-color: #000028;
+  --paragraph-text-color: #000028;
+  --elements-color:#ff0070;
+  --title-decor-color: #000028;
+  --color-title: #DB00FF;
+  --bacground-image: url(../images/cover-image-dark.png);
+}
+}

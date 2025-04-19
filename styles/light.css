@@ -13,7 +13,7 @@
   --bg-color: #fff1f7;
   --paragraph-text-color: #FF8DCB;
   --color-title: #FFC2E6;
-  --decorate-color: #353430;
+  --decorate-color: lch(20.3% 2.74 99.44 / 0.4);
   --bacground-image: url(../images/cover-image-light.png);
 }
 
@@ -32,10 +32,22 @@
   :root {
     --accent-color: #FF8DCB;
     --paragraph-style: #353430;
+    --elements-color: #353430;
+    --title-decor-color: #353430;
     --bg-color: #fff1f7;
     --paragraph-text-color: #FF8DCB;
     --color-title: #FFC2E6;
-    --decorate-color: #FF007066;
-    --bacground-image: url(../images/cover-image-light.png);    
+    --decorate-color: lch(20.3% 2.74 99.44 / 0.4);
+    --bacground-image: url(../images/cover-image-light.png);   
+  }
+
+  .theme-light .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   }
 }
